@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080d20">
+    <title>ORBIT RUSH</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game-container">
+        <header>
+            <div class="logo">ORBIT <span>RUSH</span></div>
+            <div class="best">BEST: <span id="best">0</span></div>
+            <button id="soundBtn" class="sound-btn">SOUND: ON</button>
+        </header>
+
+        <section class="game-info">
+            <div class="combo-box">
+                COMBO: <span id="combo">0</span>x
+            </div>
+            <div class="score-box">
+                <small>SCORE</small>
+                <h1 id="score">0</h1>
+            </div>
+            <p id="status">READY FOR TAKEOFF?</p>
+        </section>
+
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas"></canvas>
+            <div id="overlay" class="overlay">
+                <label for="difficulty">SELECT DIFFICULTY</label>
+
+                <select id="difficulty">
+                    <option value="0.75">EASY</option>
+                    <option value="1" selected>NORMAL</option>
+                    <option value="1.5">EXTREME</option>
+                </select>
+                <h2>ORBIT RUSH</h2>
+                <p>Switch orbits. Dodge asteroids. Collect stars.</p>
+                <button id="startBtn">START GAME</button>
+            </div>
+            <div id="pauseOverlay" class="overlay pause-overlay">
+                <h2>GAME PAUSED</h2>
+                <p>Take a breather, pilot!</p>
+                <button id="resumeBtn">RESUME GAME</button>
+            </div>
+        </div>
+        <section class="achievement-panel">
+            <h3>🏆 ACHIEVEMENTS</h3>
+            <p id="achievementList">No achievements unlocked yet.</p>
+            <div id="achievementToast"></div>
+        </section>
+
+        <div class="controls">
+            <button id="switchBtn">SWITCH ORBIT</button>
+            <button id="pauseBtn" class="pause-btn">PAUSE</button>
+            <p>Tap to switch orbits. Avoid asteroids and collect stars.</p>
+        </div>
+
+        <footer>ONE UNIVERSE. INFINITE CHALLENGES.</footer>
+    </main>
+
+    <script src="game.js"></script>
+</body>
+</html>

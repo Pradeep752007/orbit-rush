@@ -1,0 +1,349 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080d20;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 650px;
+    padding: 22px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0 25px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #38d9ff;
+}
+
+.best {
+    color: #aab5d1;
+    font-size: 13px;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.score-box {
+    text-align: left;
+}
+
+.score-box small {
+    color: #38d9ff;
+    letter-spacing: 2px;
+}
+
+.score-box h1 {
+    font-size: 40px;
+}
+
+#status {
+    font-size: 12px;
+    color: #b7c6e7;
+}
+
+.canvas-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #233c65;
+    border-radius: 18px;
+    overflow: hidden;
+    background: radial-gradient(circle, #172b50, #080d20 75%);
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: #080d20cc;
+    gap: 18px;
+}
+
+.overlay h2 {
+    color: #38d9ff;
+    font-size: 32px;
+}
+
+.overlay p {
+    color: #c6d2ed;
+    font-size: 14px;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    background: #38d9ff;
+    color: #081225;
+    font-weight: bold;
+    padding: 15px 28px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+.controls {
+    margin-top: 22px;
+}
+
+#switchBtn {
+    width: 100%;
+    max-width: 280px;
+}
+
+.controls p {
+    color: #8d9bb9;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+footer {
+    color: #647594;
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 30px;
+}
+/* ORBIT RUSH v0.2 VISUAL UPGRADE */
+
+body {
+    background: radial-gradient(circle at center, #14264b, #050814 85%);
+}
+
+.canvas-wrapper {
+    box-shadow: 0 0 30px #168bff25;
+}
+
+button {
+    transition: 0.2s ease;
+    box-shadow: 0 0 15px #38d9ff40;
+}
+
+button:hover {
+    background: #8cecff;
+    box-shadow: 0 0 25px #38d9ff90;
+}
+
+.overlay {
+    backdrop-filter: blur(5px);
+}
+
+.combo-box {
+    color: #ffcc55;
+    font-size: 13px;
+    font-weight: bold;
+}
+/* VERSION 0.3 */
+
+.sound-btn {
+    padding: 9px 13px;
+    font-size: 10px;
+}
+
+.overlay label {
+    color: #38d9ff;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+#difficulty {
+    padding: 12px 20px;
+    border-radius: 20px;
+    background: #172b50;
+    color: white;
+    border: 1px solid #38d9ff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.achievement-panel {
+    margin-top: 20px;
+    padding: 18px;
+    border: 1px solid #233c65;
+    border-radius: 15px;
+    background: #101a32;
+    text-align: left;
+}
+
+.achievement-panel h3 {
+    color: #ffcc55;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+#achievementList {
+    color: #b7c6e7;
+    font-size: 13px;
+    line-height: 2;
+}
+
+#achievementToast {
+    color: #ffcc55;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+@media (max-width: 420px) {
+    .game-container {
+        padding: 12px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .sound-btn {
+        padding: 8px;
+    }
+}
+/* ORBIT RUSH v0.4 — MOBILE OPTIMISATION */
+
+html {
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    overscroll-behavior: none;
+}
+
+.game-container {
+    width: min(100%, 650px);
+    padding: clamp(10px, 4vw, 22px);
+}
+
+.canvas-wrapper {
+    width: 100%;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+canvas {
+    touch-action: none;
+}
+
+button {
+    min-height: 46px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#switchBtn {
+    width: 100%;
+    max-width: 320px;
+    min-height: 54px;
+}
+
+.pause-btn {
+    background: #ffcc55;
+    width: 100%;
+    max-width: 180px;
+}
+
+.pause-overlay {
+    display: none;
+    z-index: 5;
+}
+
+.pause-overlay h2 {
+    color: #ffcc55;
+}
+
+.achievement-panel {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 12px;
+    }
+
+    header {
+        gap: 7px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .best {
+        font-size: 11px;
+    }
+
+    .sound-btn {
+        font-size: 9px;
+        padding: 8px;
+    }
+
+    .score-box h1 {
+        font-size: 32px;
+    }
+
+    .game-info {
+        gap: 8px;
+    }
+
+    #status {
+        font-size: 10px;
+    }
+}
+
+@media (max-height: 650px) and (orientation: landscape) {
+    .game-container {
+        max-width: 520px;
+    }
+
+    header {
+        padding: 5px 0 10px;
+    }
+}
